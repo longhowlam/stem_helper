@@ -13,7 +13,7 @@ def load_data():
 st.image("kamer.png")
 
 st.markdown("""
-## Stem helper gebasseerd op kamerdebatten
+## Stem helper gebasseerd op topics mbv top2vec op kamerdebatten
 """)
 
 # load data #################################################################################################
