@@ -15,7 +15,12 @@ st.image("kamer.png")
 st.markdown("""
 ## Stem helper 
 
-Gebasseerd op topics mbv top2vec op kamerdebatten
+### Gebasseerd op topics mbv top2vec op kamerdebatten
+
+In drie makkelijke stappen je stem uitbrengen.
+
+***
+
 """)
 
 # load data #################################################################################################
@@ -24,7 +29,10 @@ topic_partijen, plotdata = load_data()
 
 # umap cluster plot #########################################################################################
 
-st.markdown("#### 1. Krijg eerst een idee van de topics waarover gedebateerd is in de tweede kamer (in 2019)")
+st.markdown("""
+### 1. Waar is over gedebateerd in de tweede kamer
+
+Krijg eerst een idee van de topics waarover gedebateerd is in de tweede kamer (in 2019)""")
 
 fig0 = px.scatter(
     plotdata,
@@ -41,7 +49,11 @@ st.plotly_chart(fig0)
 
 
 # partijverdeling ###########################################################################################
-st.markdown("#### 2. Kijk naar de partijverdeling van een topic")
+st.markdown("""
+### 2. Kijk naar de partijverdeling van een topic
+
+Wat spreekt je aan? Zoek naar een topic en zie welke partijen hier actief in hebben gedebateerd
+""")
 
 search_term = st.text_input("vul een zoekterm in", "landbouw")
 search_term = search_term.lower()
@@ -75,7 +87,12 @@ else:
     st.write("zoekterm niet in topics sleutelwoorden")
 
 
+st.markdown("### 3. Vergeet niet te stemmen op 17 maart")
+
+
 st.markdown("""
+
+***
 
 ***
 
@@ -88,7 +105,7 @@ Van kamerdebatten in 2019 heb ik een [top2vec](https://github.com/ddangelov/Top2
 Deze topics kenmerken zich door een aantal sleutelworden. Dit streamlit dashboard geeft in de bovenstaande scatterplot een 2-dimensionale 
 weergave de gevonden topics. Hover over de scatterplot om de sleutelwoorden voor een topic te zien. 
 
-Geef een zoekterm op, waar je interesse ligt, bijvoorbeeld **lanndbouw**. Het dashboard zoekt in de sleutelwoorden van de topics.
+Geef een zoekterm op, waar je interesse ligt, bijvoorbeeld **landbouw**. Het dashboard zoekt in de sleutelwoorden van de topics.
 Zodat je een idee kan krijgen welke partij veel of weinig deelnemen in bepaalde topics / debatten. 
 
 Zie mijn [Github repo](https://github.com/longhowlam/kamer_debatten) voor wat meer details, groeten en succes met stemmen Longhow.
