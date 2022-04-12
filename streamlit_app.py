@@ -3,6 +3,7 @@ import pickle
 import pandas as pd
 import plotly.express as px
 
+
 @st.cache
 def load_data():
 
